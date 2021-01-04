@@ -1,6 +1,7 @@
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
-
+	<!-- Main Content -->
+	<div id="content">
 		<!-- Topbar -->
 		<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -8,20 +9,6 @@
 			<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
 				<i class="fa fa-bars"></i>
 			</button>
-
-			<!-- Topbar Search -->
-			<form
-				class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-				<div class="input-group">
-					<input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-						   aria-label="Search" aria-describedby="basic-addon2">
-					<div class="input-group-append">
-						<button class="btn btn-primary" type="button">
-							<i class="fas fa-search fa-sm"></i>
-						</button>
-					</div>
-				</div>
-			</form>
 
 			<!-- Topbar Navbar -->
 			<ul class="navbar-nav ml-auto">
@@ -117,7 +104,7 @@
 						</h6>
 						<a class="dropdown-item d-flex align-items-center" href="#">
 							<div class="dropdown-list-image mr-3">
-								<img class="rounded-circle" src="<?php base_url();?>public/img/undraw_profile_1.svg"
+								<img class="rounded-circle" src="<?=base_url();?>public/img/undraw_profile_1.svg"
 									 alt="">
 								<div class="status-indicator bg-success"></div>
 							</div>
@@ -129,7 +116,7 @@
 						</a>
 						<a class="dropdown-item d-flex align-items-center" href="#">
 							<div class="dropdown-list-image mr-3">
-								<img class="rounded-circle" src="<?php base_url();?>public/img/undraw_profile_2.svg"
+								<img class="rounded-circle" src="<?=base_url();?>public/img/undraw_profile_2.svg"
 									 alt="">
 								<div class="status-indicator"></div>
 							</div>
@@ -141,7 +128,7 @@
 						</a>
 						<a class="dropdown-item d-flex align-items-center" href="#">
 							<div class="dropdown-list-image mr-3">
-								<img class="rounded-circle" src="<?php base_url();?>public/img/undraw_profile_3.svg"
+								<img class="rounded-circle" src="<?=base_url();?>public/img/undraw_profile_3.svg"
 									 alt="">
 								<div class="status-indicator bg-warning"></div>
 							</div>
@@ -149,18 +136,6 @@
 								<div class="text-truncate">Last month's report looks great, I am very happy with
 									the progress so far, keep up the good work!</div>
 								<div class="small text-gray-500">Morgan Alvarez · 2d</div>
-							</div>
-						</a>
-						<a class="dropdown-item d-flex align-items-center" href="#">
-							<div class="dropdown-list-image mr-3">
-								<img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-									 alt="">
-								<div class="status-indicator bg-success"></div>
-							</div>
-							<div>
-								<div class="text-truncate">Am I a good boy? The reason I ask is because someone
-									told me that people say this to all dogs, even if they aren't good...</div>
-								<div class="small text-gray-500">Chicken the Dog · 2w</div>
 							</div>
 						</a>
 						<a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
@@ -173,9 +148,9 @@
 				<li class="nav-item dropdown no-arrow">
 					<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
 					   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+						<span class="mr-2 d-none d-lg-inline text-gray-600 small">Username</span>
 						<img class="img-profile rounded-circle"
-							 src="<?php base_url();?>public/img/undraw_profile.svg">
+							 src="<?=base_url();?>public/img/undraw_profile.svg">
 					</a>
 					<!-- Dropdown - User Information -->
 					<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -204,4 +179,8 @@
 
 		</nav>
 		<!-- End of Topbar -->
+
+		<!-- Begin Page Content -->
+		<div class="container-fluid">
+
 
