@@ -108,7 +108,7 @@
 	</li>
 	<li class="nav-item">
 		<a class="nav-link" href="<?=base_url('settings')?>">
-			<i class="fas fa-tools"></i>
+			<i class="fas fa-cogs"></i>
 			<span>System</span>
 		</a>
 	</li>

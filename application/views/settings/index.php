@@ -4,23 +4,50 @@
 
 <nav aria-label="breadcrumb">
 	<ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="<?= base_url('user') ?>"><i class="fa fa-tools">&nbsp;</i>System</a></li>
+		<li class="breadcrumb-item"><a href="<?= base_url('home') ?>"><i class="fa fa-home">&nbsp;</i>Home</a></li>
+		<li class="breadcrumb-item"><span><i class="fa fa-cogs">&nbsp;</i>System</span></li>
 	</ol>
 </nav>
 
+<?php if ($message = $this->session->flashdata('error')): ?>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				<strong><i class="fa fa-exclamation-triangle">&nbsp;</i><?= $message ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+<?php endif; ?>
+
+<?php if ($message = $this->session->flashdata('success')): ?>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="alert alert-success alert-dismissible fade show" role="alert">
+				<strong><i class="fa fa-smile-wink">&nbsp;</i><?= $message ?></strong>
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+<?php endif; ?>
+
 <div class="card shadow mb-4">
-<!--	<div class="card-header py-3">-->
-<!--		<h6 class="m-0 font-weight-bold text-primary"><i class="fa fa-user-edit">&nbsp;</i>--><?//= $title ?>
-<!--		</h6>-->
-<!--	</div>-->
 	<div class="card-body">
-		<form name="form_edit" method="post">
+		<form method="post" name="form_index">
 			<div class="row form-group">
 				<div class="col-md-3">
 					<label for="first_name">Razao social</label>
-					<input type="text" class="form-control" id="first_name" name="first_name"
+					<input type="text" class="form-control" id="sistema_razao_social" name="sistema_razao_social"
 						   value="<?= $system->sistema_razao_social ?>">
-					<?php echo form_error('first_name', ' <small class="form-text text-danger">', '</small>') ?>
+					<?php echo form_error('sistema_razao_social', ' <small class="form-text text-danger">', '</small>') ?>
 				</div>
 				<div class="col-md-3">
 					<label for="first_name">Nome fantasia</label>
@@ -106,8 +133,9 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 form-group">
-					<label for="sistema_txt_ordem_servico"></label>
-					<textarea name="sistema_txt_ordem_servico" id="sistema_txt_ordem_servico" class="form-control" cols="30" rows="4"></textarea>
+					<label for="sistema_txt_ordem_servico">Ordem de serviço</label>
+					<textarea name="sistema_txt_ordem_servico" id="sistema_txt_ordem_servico" class="form-control" cols="30" rows="4"><?=$system->sistema_txt_ordem_servico?></textarea>
+					<?php echo form_error('sistema_txt_ordem_servico', ' <small class="form-text text-danger">', '</small>') ?>
 				</div>
 			</div>
 			<hr class="my-4">
