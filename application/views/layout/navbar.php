@@ -4,15 +4,12 @@
 	<div id="content">
 		<!-- Topbar -->
 		<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
 			<!-- Sidebar Toggle (Topbar) -->
 			<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
 				<i class="fa fa-bars"></i>
 			</button>
-
 			<!-- Topbar Navbar -->
 			<ul class="navbar-nav ml-auto">
-
 				<!-- Nav Item - Search Dropdown (Visible Only XS) -->
 				<li class="nav-item dropdown no-arrow d-sm-none">
 					<a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
@@ -36,7 +33,6 @@
 						</form>
 					</div>
 				</li>
-
 				<!-- Nav Item - Alerts -->
 				<li class="nav-item dropdown no-arrow mx-1">
 					<a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
@@ -87,7 +83,6 @@
 						<a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
 					</div>
 				</li>
-
 				<!-- Nav Item - Messages -->
 				<li class="nav-item dropdown no-arrow mx-1">
 					<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
@@ -141,9 +136,7 @@
 						<a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
 					</div>
 				</li>
-
 				<div class="topbar-divider d-none d-sm-block"></div>
-
 				<!-- Nav Item - User Information -->
 				<li class="nav-item dropdown no-arrow">
 					<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -156,31 +149,22 @@
 					<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
 						 aria-labelledby="userDropdown">
 						<a class="dropdown-item" href="#">
-							<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+							<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-600"></i>
 							Profile
 						</a>
 						<a class="dropdown-item" href="#">
-							<i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+							<i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-600"></i>
 							Settings
-						</a>
-						<a class="dropdown-item" href="#">
-							<i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-							Activity Log
 						</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-							<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+							<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>
 							Logout
 						</a>
 					</div>
 				</li>
-
 			</ul>
-
 		</nav>
 		<!-- End of Topbar -->
-
 		<!-- Begin Page Content -->
 		<div class="container-fluid">
-
-

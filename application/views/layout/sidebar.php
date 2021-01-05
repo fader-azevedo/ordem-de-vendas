@@ -1,6 +1,5 @@
 <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
 	<!-- Sidebar - Brand -->
 	<a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?=base_url()?>">
 		<div class="sidebar-brand-icon rotate-n-15">
@@ -8,10 +7,8 @@
 		</div>
 		<div class="sidebar-brand-text mx-3">POS<sup></sup></div>
 	</a>
-
 	<!-- Divider -->
 	<hr class="sidebar-divider my-0">
-
 	<!-- Nav Item - Dashboard -->
 	<li class="nav-item">
 		<a class="nav-link" href="<?=base_url()?>">
@@ -19,12 +16,10 @@
 			<span>Dashboard</span></a>
 	</li>
 	<hr class="sidebar-divider">
-
 	<!-- Heading -->
 	<div class="sidebar-heading">
 		Modulos
 	</div>
-
 	<!-- Nav Item - Pages Collapse Menu -->
 	<li class="nav-item">
 		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-sales"
@@ -91,15 +86,12 @@
 			</div>
 		</div>
 	</li>
-
 	<!-- Divider -->
 	<hr class="sidebar-divider">
-
 	<!-- Heading -->
 	<div class="sidebar-heading">
 		Confiiguração
 	</div>
-
 	<!-- Nav Item - Pages Collapse Menu -->
 	<li class="nav-item">
 		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
@@ -115,18 +107,16 @@
 		</div>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" href="#">
+		<a class="nav-link" href="<?=base_url('settings')?>">
 			<i class="fas fa-tools"></i>
-			<span>Sistema</span>
+			<span>System</span>
 		</a>
 	</li>
 	<!-- Divider -->
 	<hr class="sidebar-divider d-none d-md-block">
-
 	<!-- Sidebar Toggler (Sidebar) -->
 	<div class="text-center d-none d-md-inline">
 		<button class="rounded-circle border-0" id="sidebarToggle"></button>
 	</div>
-
 </ul>
 <!-- End of Sidebar -->

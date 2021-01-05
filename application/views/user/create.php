@@ -12,7 +12,7 @@
 
 <div class="card shadow mb-4">
 	<div class="card-header py-3">
-		<h6 class="m-0 font-weight-bold text-primary"><i class="fa fa-user-edit">&nbsp;</i><?= $title ?>
+		<h6 class="m-0 font-weight-bold text-primary"><i class="fa fa-user-plus">&nbsp;</i><?= $title ?>
 			<a href="<?= base_url('user') ?>" class="btn btn-sm btn-outline-info float-right"><i
 					class="fa fa-arrow-left">&nbsp;</i>Back</a>
 		</h6>
@@ -22,19 +22,18 @@
 			<div class="row form-group">
 				<div class="col-md-4">
 					<label for="first_name">First name</label>
-					<input type="text" class="form-control" id="first_name" name="first_name"
-						   value="<?= $user->first_name ?>">
+					<input type="text" class="form-control" id="first_name" name="first_name">
 					<?php echo form_error('first_name',' <small class="form-text text-danger">','</small>')?>
 				</div>
 				<div class="col-md-4">
 					<label for="last_name">Last name</label>
-					<input type="text" class="form-control" id="last_name" name="last_name" value="<?= $user->last_name ?>">
+					<input type="text" class="form-control" id="last_name" name="last_name">
 					<?php echo form_error('last_name',' <small class="form-text text-danger">','</small>')?>
 				</div>
 
 				<div class="col-md-4">
 					<label for="email">Email</label>
-					<input type="email" class="form-control" id="email" name="email" value="<?= $user->email ?>">
+					<input type="email" class="form-control" id="email" name="email">
 					<?php echo form_error('email',' <small class="form-text text-danger">','</small>')?>
 				</div>
 			</div>
@@ -42,23 +41,23 @@
 			<div class="row form-group">
 				<div class="col-md-4">
 					<label for="username">Username</label>
-					<input type="text" class="form-control" id="username" name="username" value="<?= $user->username ?>">
+					<input type="text" class="form-control" id="username" name="username">
 					<?php echo form_error('username',' <small class="form-text text-danger">','</small>')?>
 				</div>
 
 				<div class="col-md-4">
 					<label for="active">Active</label>
 					<select name="active" id="active" class="form-control">
-						<option value="0" <?= ($user->active == 0) ? 'selected' : '' ?>>No</option>
-						<option value="1" <?= ($user->active == 1) ? 'selected' : '' ?>>Yes</option>
+						<option value="0">No</option>
+						<option value="1">Yes</option>
 					</select>
 				</div>
 
 				<div class="col-md-4">
 					<label for="profile">Profile</label>
 					<select name="profile" id="profile" class="form-control">
-						<option value="1" <?= ($user_groups->id == 1) ? 'selected' : '' ?>>Administrator</option>
-						<option value="2" <?= ($user_groups->id == 2) ? 'selected' : '' ?>>Seller</option>
+						<option value="1">Administrator</option>
+						<option value="2">Seller</option>
 					</select>
 				</div>
 			</div>
@@ -74,9 +73,9 @@
 					<?php echo form_error('passconf',' <small class="form-text text-danger">','</small>')?>
 				</div>
 			</div>
-			<input type="hidden" id="id" name="id" value="<?=$user->id?>">
-			<button type="submit" class="btn btn-sm btn-success float-right"><i class="fa fa-save">&nbsp;</i>Update</button>
+			<button type="submit" class="btn btn-sm btn-success float-right"><i class="fa fa-save">&nbsp;</i>Save</button>
 		</form>
 	</div>
 </div>
+
 <?php $this->load->view('layout/footer') ?>
