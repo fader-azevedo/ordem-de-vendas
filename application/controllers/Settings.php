@@ -1,16 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+class Settings extends CI_Controller{
 
-class Settings extends CI_Controller
-{
-
-	public function __construct()
-	{
+	public function __construct(){
 		parent::__construct();
 
 		if (!$this->ion_auth->logged_in()) {
-			redirect(base_url('auth/login'));
+			$this->session->set_flashdata('info','your session has expired');
+			redirect(base_url('auth'));
 		}
 	}
 
@@ -32,10 +30,6 @@ class Settings extends CI_Controller
 		$this->form_validation->set_rules('sistema_txt_ordem_servico', '', 'required');
 
 		if ($this->form_validation->run()) {
-
-//			echo "<prev>";
-//			print_r($this->input->post());
-//			exit();
 			$data = elements(
 				array(
 					'sistema_razao_social',
@@ -55,20 +49,21 @@ class Settings extends CI_Controller
 				),
 				$this->input->post()
 			);
-			$data = $this->security->xss_clean($data);
+//			$data = $this->security->xss_clean($data);
+			$data = html_escape($data); //not allow text with tags
 			$this->core_model->update('sistema', $data, array('sistema_id' => 1));
-//			if () {
-//				$this->session->set_flashdata('success', 'udated successfully');
-//			} else {
-//				$this->session->set_flashdata('error', 'error when try udate');
-//			}
 			redirect(base_url('settings'));
 		} else {
 			$data = array(
 				'title' => 'System',
+				'scripts' => array(
+					'vendor/mask/jquery.mask.min.js',
+					'vendor/mask/app.js',
+				),
+				'menu_active' => 'menu-system',
+
 				'system' => $this->core_model->get_by_id('sistema', array('sistema_id' => 1))
 			);
-//			$this->session->set_flashdata('error', 'error');
 			$this->load->view('settings/index', $data);
 		}
 	}

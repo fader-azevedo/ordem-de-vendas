@@ -34,6 +34,12 @@
 			</div>
 		</div>
 	</li>
+
+	<li class="nav-item" id="menu-client">
+		<a class="nav-link" href="<?=base_url('client')?>">
+			<i class="fas fa-user-tie"></i>
+			<span>Clientes</span></a>
+	</li>
 	<li class="nav-item">
 		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-parameter"
 		   aria-expanded="true" aria-controls="collapse-parameter">
@@ -93,20 +99,20 @@
 		Confiiguração
 	</div>
 	<!-- Nav Item - Pages Collapse Menu -->
-	<li class="nav-item">
-		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-		   aria-expanded="true" aria-controls="collapseTwo">
+	<li class="nav-item" id="menu-user">
+		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-user"
+		   aria-expanded="true" aria-controls="collapse-user">
 			<i class="fas fa-users"></i>
 			<span>Users</span>
 		</a>
-		<div id="collapseTwo" class="collapse" aria-labelledby="" data-parent="#accordionSidebar">
+		<div id="collapse-user" class="collapse" aria-labelledby="" data-parent="#accordionSidebar">
 			<div class="bg-white py-2 collapse-inner rounded">
-				<a class="collapse-item" href="<?=base_url('user')?>">List</a>
-				<a class="collapse-item" href="<?=base_url('user/create')?>">New</a>
+				<a class="collapse-item index" href="<?=base_url('user')?>"><i class="fa fa-list">&nbsp;</i>List</a>
+				<a class="collapse-item create" href="<?=base_url('user/create')?>"><i class="fa fa-plus">&nbsp;</i>New</a>
 			</div>
 		</div>
 	</li>
-	<li class="nav-item">
+	<li class="nav-item" id="menu-system">
 		<a class="nav-link" href="<?=base_url('settings')?>">
 			<i class="fas fa-cogs"></i>
 			<span>System</span>
@@ -119,4 +125,4 @@
 		<button class="rounded-circle border-0" id="sidebarToggle"></button>
 	</div>
 </ul>
-<!-- End of Sidebar -->
+<!-- End p of Sidebar -->

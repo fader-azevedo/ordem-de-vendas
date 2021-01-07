@@ -9,6 +9,7 @@
 	<meta name="author" content="">
 	<link href="<?=base_url(); ?>public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 	<link href="<?=base_url(); ?>public/css/sb-admin-2.css" rel="stylesheet">
+<!--	<link href="--><?//=base_url(); ?><!--public/css/app.css" rel="stylesheet">-->
 	<?php if (isset($styles)): ?>
 		<?php foreach ($styles as $style): ?>
 			<link href="<?=base_url()?>public/<?=$style?>" rel="stylesheet">

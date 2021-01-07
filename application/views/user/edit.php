@@ -5,8 +5,9 @@
 
 <nav aria-label="breadcrumb">
 	<ol class="breadcrumb">
-		<li class="breadcrumb-item"><a href="<?= base_url('user') ?>"><i class="fa fa-user">&nbsp;</i>Users</a></li>
-<!--		<li class="breadcrumb-item active" aria-current="page">--><?//= $title ?><!--</li>-->
+		<li class="breadcrumb-item"><a href="<?= base_url('home') ?>"><i class="fa fa-home">&nbsp;</i>Home</a></li>
+		<li class="breadcrumb-item">Users</li>
+		<li class="breadcrumb-item" aria-current="page"><?= $title ?></li>
 	</ol>
 </nav>
 
@@ -19,31 +20,35 @@
 	</div>
 	<div class="card-body">
 		<form name="form_edit" method="post">
+
+
 			<div class="row form-group">
 				<div class="col-md-4">
 					<label for="first_name">First name</label>
 					<input type="text" class="form-control" id="first_name" name="first_name"
 						   value="<?= $user->first_name ?>">
-					<?php echo form_error('first_name',' <small class="form-text text-danger">','</small>')?>
+					<?php echo form_error('first_name', ' <small class="form-text text-danger">', '</small>') ?>
 				</div>
 				<div class="col-md-4">
 					<label for="last_name">Last name</label>
-					<input type="text" class="form-control" id="last_name" name="last_name" value="<?= $user->last_name ?>">
-					<?php echo form_error('last_name',' <small class="form-text text-danger">','</small>')?>
+					<input type="text" class="form-control" id="last_name" name="last_name"
+						   value="<?= $user->last_name ?>">
+					<?php echo form_error('last_name', ' <small class="form-text text-danger">', '</small>') ?>
 				</div>
 
 				<div class="col-md-4">
 					<label for="email">Email</label>
 					<input type="email" class="form-control" id="email" name="email" value="<?= $user->email ?>">
-					<?php echo form_error('email',' <small class="form-text text-danger">','</small>')?>
+					<?php echo form_error('email', ' <small class="form-text text-danger">', '</small>') ?>
 				</div>
 			</div>
 
 			<div class="row form-group">
 				<div class="col-md-4">
 					<label for="username">Username</label>
-					<input type="text" class="form-control" id="username" name="username" value="<?= $user->username ?>">
-					<?php echo form_error('username',' <small class="form-text text-danger">','</small>')?>
+					<input type="text" class="form-control" id="username" name="username"
+						   value="<?= $user->username ?>">
+					<?php echo form_error('username', ' <small class="form-text text-danger">', '</small>') ?>
 				</div>
 
 				<div class="col-md-4">
@@ -66,16 +71,17 @@
 				<div class="col-md-6">
 					<label for="password">Password</label>
 					<input type="password" class="form-control" id="password" name="password">
-					<?php echo form_error('password',' <small class="form-text text-danger">','</small>')?>
+					<?php echo form_error('password', ' <small class="form-text text-danger">', '</small>') ?>
 				</div>
 				<div class="col-md-6">
 					<label for="passconf">Confirm password</label>
 					<input type="password" class="form-control" id="passconf" name="passconf">
-					<?php echo form_error('passconf',' <small class="form-text text-danger">','</small>')?>
+					<?php echo form_error('passconf', ' <small class="form-text text-danger">', '</small>') ?>
 				</div>
 			</div>
-			<input type="hidden" id="id" name="id" value="<?=$user->id?>">
-			<button type="submit" class="btn btn-sm btn-success float-right"><i class="fa fa-save">&nbsp;</i>Update</button>
+			<input type="hidden" id="id" name="id" value="<?= $user->id ?>">
+			<button type="submit" class="btn btn-sm btn-success float-right"><i class="fa fa-save">&nbsp;</i>Update
+			</button>
 		</form>
 	</div>
 </div>

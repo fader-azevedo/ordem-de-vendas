@@ -6,8 +6,9 @@ class User extends CI_Controller{
 	public function __construct(){
 		parent::__construct();
 
-		if (!$this->ion_auth->logged_in())		{
-			redirect(base_url('auth/login'));
+		if (!$this->ion_auth->logged_in()){
+			$this->session->set_flashdata('info','your session has expired');
+			redirect(base_url('auth'));
 		}
 	}
 
@@ -22,6 +23,9 @@ class User extends CI_Controller{
 					'vendor/datatables/dataTables.bootstrap4.min.js',
 					'vendor/datatables/app.js'
 				),
+			'menu_active' => 'menu-user',
+			'sub_menu_active' => 'index',
+
 			'users' => $this->ion_auth->users()->result()
 		);
 		$this->load->view('user/index', $data);
@@ -60,6 +64,8 @@ class User extends CI_Controller{
 		}else{
 			$data = array(
 				'title' => 'Create user',
+				'menu_active' => 'menu-user',
+				'sub_menu_active' => 'create',
 			);
 			$this->load->view('user/create', $data);
 		}

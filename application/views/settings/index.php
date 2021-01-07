@@ -5,7 +5,7 @@
 <nav aria-label="breadcrumb">
 	<ol class="breadcrumb">
 		<li class="breadcrumb-item"><a href="<?= base_url('home') ?>"><i class="fa fa-home">&nbsp;</i>Home</a></li>
-		<li class="breadcrumb-item"><span><i class="fa fa-cogs">&nbsp;</i>System</span></li>
+		<li class="breadcrumb-item"><span>System</span></li>
 	</ol>
 </nav>
 
@@ -57,7 +57,7 @@
 				</div>
 				<div class="col-md-3">
 					<label for="first_name">cnpj</label>
-					<input type="text" class="form-control" id="sistema_cnpj" name="sistema_cnpj"
+					<input type="text" class="form-control cnpj" id="sistema_cnpj" name="sistema_cnpj"
 						   value="<?= $system->sistema_cnpj ?>">
 					<?php echo form_error('sistema_cnpj', ' <small class="form-text text-danger">', '</small>') ?>
 				</div>

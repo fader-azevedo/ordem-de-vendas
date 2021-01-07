@@ -34,7 +34,7 @@
 			<div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
 			<div class="modal-footer">
 				<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-				<a class="btn btn-primary" href="<?=base_url('auth/logout')?>">Logout</a>
+				<a class="btn btn-primary" href="<?= base_url('auth/logout') ?>">Logout</a>
 			</div>
 		</div>
 	</div>
@@ -51,5 +51,17 @@
 		<script src="<?= base_url(); ?>public/<?= $script ?>"></script>
 	<?php endforeach; ?>
 <?php endif ?>
+<?php if (isset($menu_active)): ?>
+	<script>
+        $(document).ready(function () {
+            const menu = '#<?=$menu_active?>';
+            $(menu).addClass('active').find('div.collapse').addClass('show');
+			<?php if (isset($sub_menu_active)):?>
+            	$(menu).find('a.<?=$sub_menu_active?>').addClass('active');
+			<?php endif;?>
+        })
+	</script>
+<?php endif ?>
+
 </body>
 </html>

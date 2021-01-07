@@ -3,14 +3,14 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
-/* 
+/*
     Created on : 27/03/2020, 23:44:52
     Author     : samera
 */
 
 
 body{
-    font-size: 0.8rem;
+    /*font-size: 0.8rem;*/
 }
 
 .breadcrumb {
@@ -44,17 +44,17 @@ form.user .form-control-user {
 }
 
 .alert-danger{
-    background-color: #ff0000; 
+    background-color: #ff0000;
     color: white;
 }
 
 .alert-success{
-    background-color: #93c54b; 
+    background-color: #93c54b;
     color: white;
 }
 
 .text-success{
-    color: #93c54b !important; 
+    color: #93c54b !important;
 }
 
 .border-left-success{
