@@ -34,11 +34,15 @@
 			</div>
 		</div>
 	</li>
-
 	<li class="nav-item" id="menu-client">
 		<a class="nav-link" href="<?=base_url('client')?>">
 			<i class="fas fa-user-tie"></i>
 			<span>Clientes</span></a>
+	</li>
+	<li class="nav-item" id="menu-provider">
+		<a class="nav-link" href="<?=base_url('provider')?>">
+			<i class="fas fa-user-friends"></i>
+			<span>Fornecedores</span></a>
 	</li>
 	<li class="nav-item">
 		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse-parameter"
